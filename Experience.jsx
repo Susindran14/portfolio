@@ -11,11 +11,11 @@ export default function Experience() {
   };
 
   return (
-    <section id="experience" className="py-24 relative bg-slate-950">
+    <section id="experience" className="py-16 sm:py-24 relative bg-slate-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono text-cyan-400 mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>CAREER PATHWAY</span>
@@ -23,7 +23,7 @@ export default function Experience() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Work & <span className="text-gradient">Internship Experience</span>
           </h2>
-          <p className="mt-4 text-slate-400 text-base leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
             Hands-on full-stack development experience, API engineering, and responsive software design.
           </p>
         </div>
@@ -32,7 +32,7 @@ export default function Experience() {
         <div className="max-w-4xl mx-auto relative">
           
           {/* Vertical Timeline Line */}
-          <div className="absolute left-4 sm:left-1/2 top-0 bottom-0 w-0.5 bg-slate-800 -translate-x-1/2" />
+          <div className="absolute left-3.5 sm:left-1/2 top-0 bottom-0 w-0.5 bg-slate-800 -translate-x-1/2" />
 
           {experienceData.map((exp, idx) => {
             const isExpanded = expandedIndex === idx;
@@ -44,16 +44,16 @@ export default function Experience() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="relative mb-12"
+                className="relative mb-8 sm:mb-12"
               >
                 {/* Timeline Dot */}
-                <div className="absolute left-4 sm:left-1/2 -translate-x-1/2 top-0 w-8 h-8 rounded-full bg-slate-950 border-2 border-cyan-400 flex items-center justify-center shadow-lg shadow-cyan-500/20 z-20">
-                  <div className="w-2.5 h-2.5 rounded-full bg-cyan-400 animate-pulse" />
+                <div className="absolute left-3.5 sm:left-1/2 -translate-x-1/2 top-0 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-slate-950 border-2 border-cyan-400 flex items-center justify-center shadow-lg shadow-cyan-500/20 z-20">
+                  <div className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-cyan-400 animate-pulse" />
                 </div>
 
                 {/* Timeline Card */}
-                <div className="ml-12 sm:ml-0 sm:w-[calc(50%-2rem)] sm:even:ml-auto">
-                  <div className="glass-panel rounded-2xl p-6 border border-slate-800 shadow-xl transition-all duration-300 hover:border-cyan-500/40">
+                <div className="ml-9 sm:ml-0 sm:w-[calc(50%-2rem)] sm:even:ml-auto">
+                  <div className="glass-panel rounded-2xl p-4 sm:p-6 border border-slate-800 shadow-xl transition-all duration-300 hover:border-cyan-500/40">
                     
                     {/* Role Header */}
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
@@ -61,21 +61,21 @@ export default function Experience() {
                         {exp.type}
                       </span>
                       <span className="text-xs font-mono text-slate-400 flex items-center gap-1">
-                        <Calendar className="w-3.5 h-3.5 text-cyan-400" />
+                        <Calendar className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                         {exp.period}
                       </span>
                     </div>
 
-                    <h3 className="text-xl font-bold text-white mb-1">{exp.role}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-white mb-1 leading-snug">{exp.role}</h3>
 
-                    <div className="flex flex-wrap items-center gap-3 text-xs text-slate-400 mb-4">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-400 mb-3 sm:mb-4">
                       <span className="font-semibold text-slate-200 flex items-center gap-1">
-                        <Briefcase className="w-3.5 h-3.5 text-cyan-400" />
+                        <Briefcase className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                         {exp.company}
                       </span>
                       <span>•</span>
                       <span className="flex items-center gap-1">
-                        <MapPin className="w-3.5 h-3.5 text-slate-500" />
+                        <MapPin className="w-3.5 h-3.5 text-slate-500 shrink-0" />
                         {exp.location}
                       </span>
                     </div>
@@ -87,10 +87,10 @@ export default function Experience() {
                     {/* Expand Details Trigger */}
                     <button
                       onClick={() => toggleExpand(idx)}
-                      className="w-full py-2 px-3 rounded-lg bg-slate-900 border border-slate-800 text-xs font-mono text-cyan-300 hover:text-cyan-200 flex items-center justify-between transition-colors"
+                      className="w-full min-h-[44px] py-2.5 px-3.5 rounded-xl bg-slate-900 border border-slate-800 text-xs font-mono text-cyan-300 hover:text-cyan-200 flex items-center justify-between transition-colors active:scale-[0.99]"
                     >
                       <span>{isExpanded ? 'Hide Key Highlights' : 'View Key Highlights & Tech'}</span>
-                      {isExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                      {isExpanded ? <ChevronUp className="w-4 h-4 shrink-0" /> : <ChevronDown className="w-4 h-4 shrink-0" />}
                     </button>
 
                     {/* Expandable Content */}
@@ -111,7 +111,7 @@ export default function Experience() {
                               {exp.highlights.map((h, hIdx) => (
                                 <li key={hIdx} className="flex items-start gap-2 text-xs text-slate-300">
                                   <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                                  <span>{h}</span>
+                                  <span className="leading-relaxed">{h}</span>
                                 </li>
                               ))}
                             </ul>
@@ -119,7 +119,7 @@ export default function Experience() {
 
                           <div>
                             <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1">
-                              <Code2 className="w-3.5 h-3.5 text-cyan-400" />
+                              <Code2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
                               <span>Technologies Used:</span>
                             </h4>
                             <div className="flex flex-wrap gap-1.5">

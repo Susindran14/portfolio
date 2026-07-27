@@ -27,11 +27,11 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative bg-slate-900/40">
+    <section id="contact" className="py-16 sm:py-24 relative bg-slate-900/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-mono text-cyan-400 mb-3">
             <Sparkles className="w-3.5 h-3.5" />
             <span>LET'S CONNECT</span>
@@ -39,12 +39,12 @@ export default function Contact() {
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="mt-4 text-slate-400 text-base leading-relaxed">
+          <p className="mt-3 sm:mt-4 text-slate-400 text-sm sm:text-base leading-relaxed">
             Have a project in mind, software opportunity, or collaboration inquiry? Feel free to drop a message or reach out directly.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           
           {/* Left Column: Direct Contact Info Cards */}
           <motion.div
@@ -52,21 +52,21 @@ export default function Contact() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="lg:col-span-5 space-y-6"
+            className="lg:col-span-5 space-y-5 sm:space-y-6"
           >
-            <div className="glass-panel rounded-2xl p-6 sm:p-8 border border-slate-800">
-              <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                <MessageSquare className="w-5 h-5 text-cyan-400" />
+            <div className="glass-panel rounded-2xl p-5 sm:p-8 border border-slate-800">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-5 sm:mb-6 flex items-center gap-2">
+                <MessageSquare className="w-5 h-5 text-cyan-400 shrink-0" />
                 <span>Contact Details</span>
               </h3>
 
-              <div className="space-y-4">
+              <div className="space-y-3.5 sm:space-y-4">
                 
                 {/* Email Item */}
-                <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between group">
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between group">
                   <div className="flex items-center gap-3 overflow-hidden">
                     <div className="p-2.5 rounded-lg bg-cyan-500/10 text-cyan-400 shrink-0">
-                      <Mail className="w-5 h-5" />
+                      <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div className="truncate">
                       <div className="text-[10px] font-mono text-slate-500 uppercase">Email Address</div>
@@ -77,7 +77,7 @@ export default function Contact() {
                   </div>
                   <button
                     onClick={() => handleCopy(personalData.email, 'email')}
-                    className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white shrink-0 ml-2"
+                    className="p-2.5 rounded-xl bg-slate-800 text-slate-400 hover:text-white shrink-0 ml-2 min-h-[44px] min-w-[44px] flex items-center justify-center active:scale-95"
                     title="Copy Email"
                   >
                     {copiedField === 'email' ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
@@ -85,9 +85,9 @@ export default function Contact() {
                 </div>
 
                 {/* Location Item */}
-                <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
+                <div className="p-3.5 sm:p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center gap-3">
                   <div className="p-2.5 rounded-lg bg-emerald-500/10 text-emerald-400 shrink-0">
-                    <MapPin className="w-5 h-5" />
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <div>
                     <div className="text-[10px] font-mono text-slate-500 uppercase">Location</div>
@@ -98,8 +98,8 @@ export default function Contact() {
               </div>
 
               {/* Social Profiles */}
-              <div className="mt-8 pt-6 border-t border-slate-800">
-                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-4">
+              <div className="mt-6 sm:mt-8 pt-5 sm:pt-6 border-t border-slate-800">
+                <h4 className="text-xs font-mono uppercase tracking-wider text-slate-400 mb-3.5">
                   Find Me Online:
                 </h4>
                 <div className="flex items-center gap-3">
@@ -107,7 +107,7 @@ export default function Contact() {
                     href={personalData.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-2.5 px-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center gap-2 transition-all"
+                    className="flex-1 py-3 px-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center gap-2 transition-all min-h-[44px] active:scale-[0.98]"
                   >
                     <Github className="w-4 h-4" />
                     <span>GitHub</span>
@@ -116,7 +116,7 @@ export default function Contact() {
                     href={personalData.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-2.5 px-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center gap-2 transition-all"
+                    className="flex-1 py-3 px-4 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-cyan-500/40 text-xs font-mono font-semibold flex items-center justify-center gap-2 transition-all min-h-[44px] active:scale-[0.98]"
                   >
                     <Linkedin className="w-4 h-4" />
                     <span>LinkedIn</span>
@@ -135,8 +135,8 @@ export default function Contact() {
             transition={{ duration: 0.5 }}
             className="lg:col-span-7"
           >
-            <div className="glass-panel rounded-2xl p-6 sm:p-8 border border-slate-800">
-              <h3 className="text-xl font-bold text-white mb-6">Send Me a Message</h3>
+            <div className="glass-panel rounded-2xl p-5 sm:p-8 border border-slate-800">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-5 sm:mb-6">Send Me a Message</h3>
 
               {submitted ? (
                 <motion.div
@@ -159,7 +159,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="John Doe"
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-base sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors min-h-[44px]"
                       />
                     </div>
                     <div>
@@ -170,7 +170,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="john@example.com"
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-base sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors min-h-[44px]"
                       />
                     </div>
                   </div>
@@ -183,26 +183,26 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                       placeholder="Project Opportunity / Internship Inquiry"
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-base sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors min-h-[44px]"
                     />
                   </div>
 
                   <div>
                     <label className="block text-xs font-mono text-slate-400 mb-1.5">Message</label>
                     <textarea
-                      rows={5}
+                      rows={4}
                       required
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Hi Susindran, I would like to discuss..."
-                      className="w-full px-4 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-sm focus:outline-none focus:border-cyan-500 transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl bg-slate-900/90 border border-slate-800 text-slate-100 text-base sm:text-sm focus:outline-none focus:border-cyan-500 transition-colors resize-none"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-sm shadow-lg shadow-cyan-500/20 transition-all hover:scale-[1.01] flex items-center justify-center gap-2 disabled:opacity-50"
+                    className="w-full py-3.5 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-slate-950 font-bold text-sm sm:text-base shadow-lg shadow-cyan-500/20 transition-all hover:scale-[1.01] flex items-center justify-center gap-2 disabled:opacity-50 min-h-[48px] active:scale-[0.99]"
                   >
                     {isSubmitting ? (
                       <span className="animate-pulse">Sending Message...</span>
