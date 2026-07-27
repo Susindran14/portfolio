@@ -6,7 +6,6 @@ export const personalData = {
   role: "Aspiring Software Engineer",
   subhead: "Computer Science Undergrad | Full-Stack Web & Mobile Developer",
   email: "susindran.natarajan@gmail.com",
-  phone: "+91 6374331697",
   location: "Coimbatore, Tamil Nadu, India",
   linkedin: "https://www.linkedin.com/in/susindran-n-72b9022ab/",
   github: "https://github.com/Susindran14",

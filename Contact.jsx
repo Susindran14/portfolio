@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Copy, Check, Sparkles, MessageSquare } from 'lucide-react';
+import { Mail, MapPin, Send, Github, Linkedin, Copy, Check, Sparkles, MessageSquare } from 'lucide-react';
 import { personalData } from './portfolioData.js';
 
 export default function Contact() {
@@ -81,28 +81,6 @@ export default function Contact() {
                     title="Copy Email"
                   >
                     {copiedField === 'email' ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
-                  </button>
-                </div>
-
-                {/* Phone Item */}
-                <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 flex items-center justify-between group">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-lg bg-purple-500/10 text-purple-400 shrink-0">
-                      <Phone className="w-5 h-5" />
-                    </div>
-                    <div>
-                      <div className="text-[10px] font-mono text-slate-500 uppercase">Phone Number</div>
-                      <a href={`tel:${personalData.phone}`} className="text-xs sm:text-sm font-semibold text-slate-200 hover:text-cyan-400 block">
-                        {personalData.phone}
-                      </a>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleCopy(personalData.phone, 'phone')}
-                    className="p-2 rounded-lg bg-slate-800 text-slate-400 hover:text-white shrink-0 ml-2"
-                    title="Copy Phone"
-                  >
-                    {copiedField === 'phone' ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
                   </button>
                 </div>
 

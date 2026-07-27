@@ -61,7 +61,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8 pt-6 border-t border-slate-900 text-center text-xs text-slate-500 font-mono">
-        © {new Date().getFullYear()} Susindran N. Built with React, Tailwind CSS & Framer Motion.
+        © {new Date().getFullYear()} Susindran N. All rights reserved.
       </div>
     </footer>
   );

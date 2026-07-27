@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Download, Github, Linkedin, Mail, Sparkles, Award, Code2, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Sparkles, Award, Code2, CheckCircle2 } from 'lucide-react';
 import { personalData } from './portfolioData.js';
 
 export default function Hero() {
@@ -69,16 +69,6 @@ export default function Hero() {
                 className="px-6 py-3.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-cyan-500/50 font-semibold text-sm transition-all duration-300 hover:scale-105"
               >
                 Get In Touch
-              </a>
-
-              <a
-                href="./resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-4 py-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-800/80 text-cyan-400 border border-slate-800 hover:border-cyan-500/30 font-semibold text-sm transition-all flex items-center gap-2"
-              >
-                <Download className="w-4 h-4" />
-                <span className="hidden sm:inline">Resume</span>
               </a>
             </div>
 
